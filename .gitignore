@@ -1,0 +1,9 @@
+src
+pkg
+*.tar.xz
+*.tar.gz
+*.zip
+*.pkg.tar.zst
+*.log
+.psci_modules
+roblox-wine-staging-v*.patch
