@@ -66,12 +66,9 @@ makedepends=('patch' 'git' 'autoconf' 'ncurses' 'bison' 'perl' 'fontforge' 'flex
 
 build() {
     cd "$srcdir"
-    # for some reason the rdr2 patch makes this fail, so it is not applied
-    wget https://github.com/SegoGithub/wine-tkg-git/commit/38eda5e6fa9a457b84518ab7c1ecae323837bce4.patch -O "$srcdir/dont-apply-rdr2.patch"
     git clone https://github.com/Frogging-Family/wine-tkg-git.git
     cd "$srcdir/wine-tkg-git/wine-tkg-git"
     git apply "$srcdir/roblox-wine-staging-v2.6.patch"
-    git apply "$srcdir/dont-apply-rdr2.patch"
     makepkg -si --noconfirm
 }
 
