@@ -1,8 +1,11 @@
 # Maintainer: Mohamed Ahmed (Sego) <sego at sego dot app>
-pkgname=wine-tkg-git-rbx
+pkgname=wine-tkg-git-roblox
 pkgrel=1
 pkgver=2.6
 url="https://github.com/Frogging-Family/wine-tkg-git"
+# my fork of the patch uses wine 7.19 which is NOT the latest version of wine
+# Wine 7.20+ doesn't work with 0002-proton_LFH.mypatch
+# https://github.com/Frogging-Family/wine-tkg-git/issues/889
 source=("https://raw.githubusercontent.com/SegoGithub/robloxWineBuildGuide/main/roblox-wine-staging-v2.6.patch")
 pkgdesc="wine-tkg-git with patches for Roblox"
 arch=('x86_64')
